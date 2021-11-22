@@ -117,11 +117,14 @@ header {
   position: relative;
   z-index: 50;
 }
-
+.navigation {
+  height: 10vh;
+}
 .navigation .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
 }
 
 .logo a {
@@ -133,13 +136,14 @@ header {
 .header-content .container {
   overflow: hidden;
 
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 10rem);
 }
 nav {
   display: flex;
   flex-grow: 1;
-
   justify-content: space-around;
+  height: 100%;
+  align-items: center;
 }
 
 .links ul {
@@ -163,13 +167,13 @@ nav {
 
   -webkit-box-shadow: 0px 10px 57px -14px rgba(240, 120, 120, 1);
   -moz-box-shadow: 0px 10px 57px -14px rgba(240, 120, 120, 1);
-  box-shadow: 0px 10px 57px -14px rgba(240, 120, 120, 1);
+  box-shadow: 0px 10px 11px -12px rgba(240, 120, 120, 1);
 }
 
 .aboutus-btn {
   background-color: white;
   width: 190px;
-  margin: 2rem 1rem;
+  margin: 1rem 1rem;
   -webkit-box-shadow: 0px 10px 30px -14px rgb(134, 81, 81);
   -moz-box-shadow: 0px 10px 30px -14px rgb(134, 81, 81);
   box-shadow: 0px 10px 30px -14px rgb(134, 81, 81);
@@ -192,42 +196,43 @@ nav {
 .header-subtitle {
   font-weight: 350;
   letter-spacing: 0.3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 .header-content .text {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   line-height: 2;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 header .column-2 {
   position: relative;
 
-  width: 100%;
-}
-.imgdiv {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+ 
+  width: 100%;
+  height: 80vh;
 }
-
+header .column-1 {
+  margin-right: 0;
+}
 .stack01 {
   position: absolute;
-  max-width: 60%;
-  border-radius: 8%;
-  height: 100%;
+  max-width: 65%;
+  border-radius: 12%;
+  max-height: 95%;
   z-index: 15;
-  transform: translateX(12%);
+
   box-shadow: 51px 10px 96px -71px rgba(0, 0, 0, 0.493);
 }
 .stack02 {
   max-width: 50%;
-  height: 75%;
+  max-height: 80%;
   z-index: 12;
-  border-radius: 10%;
-  transform: translateX(78%) scale(0.8);
+  border-radius: 12%;
+  transform: translateX(85%) translateY(-8%);
   box-shadow: 51px 10px 96px -71px rgba(0, 0, 0, 0.493);
 }
 .overlay {
@@ -238,7 +243,7 @@ header .column-2 {
   left: 0;
   background: var(--brand-gradient);
   color: white;
-  clip-path: polygon(0 0, 72% 0, 51% 90%, 0 100%);
+  clip-path: polygon(0 0, 66% 0, 51% 90%, 0 100%);
 }
 
 /*---HEADER - end---*/
@@ -246,6 +251,8 @@ header .column-2 {
 /*----clients-section----*/
 .client-section {
   position: relative;
+
+  padding: 0;
 }
 
 .clients {
@@ -275,11 +282,15 @@ header .column-2 {
   height: 100%;
   overflow: hidden;
   margin-top: 3rem;
+  
+  display: flex;
 }
 .solution-section .column-1 {
   margin-top: 0;
   padding-top: 0;
   width: 100%;
+  align-self: flex-start;
+
 }
 
 .solution-section.section {
@@ -476,7 +487,7 @@ header .column-2 {
 
 .course-slider {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
@@ -484,7 +495,7 @@ header .column-2 {
 .controllers {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-self: flex-start;
 }
 
 .right,
@@ -516,17 +527,18 @@ header .column-2 {
 
 .slide-cards {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+
   width: 70%;
+  height: 50vh;
 }
 .cards {
-  width: 48vmin;
-  height: 42vmin;
-  margin: 2%;
+  max-width: 48vmin;
+  max-height: 42vmin;
+
   border-radius: 18px;
-  box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 15px 36px 1px rgba(0, 0, 0, 0.15);
 }
 .cardimg {
   max-height: 50%;
@@ -569,7 +581,7 @@ header .column-2 {
 .plans-section {
   text-align: center;
   position: relative;
-  padding: 2.5rem 0;
+  padding-bottom: 2.5rem;
   height: 100%;
 }
 .plans-section .separator {
@@ -654,15 +666,7 @@ header .column-2 {
   margin-bottom: 1rem;
 }
 
-.plan:hover {
-  height: 39em;
 
-  margin-bottom: 0;
-  box-shadow: 0px 0px 36px 6px rgba(0, 0, 0, 0.247);
-}
-.plan:hover .start-btn {
-  display: inline-block;
-}
 
 /************dfeedback***********/
 .customer-section {
@@ -720,6 +724,7 @@ header .column-2 {
 .join-section .container {
   position: absolute;
   text-align: center;
+  width: 60%;
 }
 .join-title {
   color: var(--black-text);
@@ -744,7 +749,7 @@ header .column-2 {
   left: 0;
   background: var(--brand-gradient);
   color: white;
-  clip-path: polygon(26% 29%, 100% 10%, 100% 75%, 11% 75%);
+  clip-path: polygon(26% 15%, 100% 10%, 100% 75%, 11% 75%);
 }
 /*********end of join section*********/
 .footer {
@@ -865,7 +870,7 @@ header .column-2 {
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.hamburger__checkbox:checked + .hamburger__background {
+.hamburger__checkbox:checked ~ .hamburger__background {
   transform: scale(80);
 }
 
@@ -940,6 +945,9 @@ header .column-2 {
   .header-content .column-1 {
     padding: 0;
   }
+  header .column-2 {
+    max-height: 30vh;
+  }
   .hamburger__background,
   .hamburger__btn {
     height: 2rem;
@@ -980,7 +988,7 @@ header .column-2 {
     font-size: 1.2rem;
   }
   .header-title {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     padding-bottom: 0.5rem;
   }
   .header-content .text {
@@ -1010,10 +1018,30 @@ header .column-2 {
     padding: 1rem 0;
   }
   .plan {
-    height: 39em;
-  }
+  
+    height: 21em;
+  padding: 0;
+  
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.15);
+}
+
+.plans-section .title{
+  font-size: 1.5rem;
+}
+.plans-title{
+  padding-bottom: 1rem;
+}
+.plans-section .container{
+  padding-top: 0;
+}
+.plan-text{
+  
+  padding: 0 6px;
+
+}
   .start-btn {
     display: inline-block;
+    padding: 10px 0;
   }
   .course-slider {
     flex-wrap: wrap;
@@ -1021,8 +1049,9 @@ header .column-2 {
     align-items: center;
   }
 
-  .slide-cards {
+  .slide-cards{
     flex-wrap: wrap;
+    height: 24vh;
   }
 
   .clients {
@@ -1034,21 +1063,34 @@ header .column-2 {
   }
   .footer .footerlinks {
     max-width: 250px;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0;
+    line
   }
-
+  .footer .column-1{
+    text-align: center;
+    margin: 0 auto;
+  }
+.footer .column-2{
+  margin: 0;
+}
+.copyright{
+  margin: 0;
+}
+.join-section{
+  height: 70vh;
+}
   .slide-cards {
     width: 100%;
     height: 50vh;
     margin: 0;
-    padding-top: 1rem;
+ justify-content: center;
   }
   .card-foot {
     flex-wrap: wrap;
   }
   .title {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   .solution-subtitle {
     font-size: 0.8rem;
@@ -1061,18 +1103,27 @@ header .column-2 {
     margin: 2rem 1rem;
   }
   .cards {
-    width: 80vmin;
-    height: 90vmin;
+    min-width: 90%;
+    height: 142px;
+    margin: 0;    overflow: hidden;
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.15);
   }
+  .card-title{
+    padding: 0rem 0rem;
+    font-size: .6rem;
+  }
+.card-foot{
+  font-size: .6rem;
+}
+ 
   .cards:nth-child(2) {
     display: none;
   }
-
-  .plan {
-    height: 39em;
-
-    box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.15);
+  .right,
+  .left {
+    font-size: 1rem;
   }
+
   .resources-section .column-2 {
     margin: 0;
   }
@@ -1087,6 +1138,10 @@ header .column-2 {
   }
   .hamburger__icon {
     margin-top: 1rem;
+  }
+
+  .hamburger__checkbox{
+    overflow: hidden;
   }
   .hamburger__icon,
   .hamburger__icon::after,
@@ -1141,13 +1196,10 @@ header .column-2 {
   .analysis-section .grid-2 {
     flex-wrap: wrap;
   }
-  .imgdiv {
-    width: 100%;
-    margin: 5rem auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  header .column-2 {
+    max-height: 48vh;
   }
+ 
   .overlay {
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0 80%);
   }
@@ -1185,8 +1237,25 @@ header .column-2 {
     padding: 1rem 0;
   }
   .plan {
-    height: 39em;
+    height: 29em;
+    width: 90%;
+  
   }
+  
+.plans-section .title{
+  font-size: 1.5rem;
+}
+.plans-title{
+  padding-bottom: 1rem;
+}
+.plans-section .container{
+  padding-top: 0;
+}
+.plan-text{
+  
+  padding: 0 6px;
+
+}
   .start-btn {
     display: inline-block;
   }
@@ -1198,6 +1267,10 @@ header .column-2 {
 
   .slide-cards {
     flex-wrap: wrap;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
 
   .clients {
@@ -1227,16 +1300,22 @@ header .column-2 {
     width: 80%;
   }
   .cards {
-    width: 63vmin;
-    height: 78vmin;
-    margin: 5%;
+    min-width: 250px;
+    min-height: 220px;
+    margin: 0 2%;    overflow: hidden;
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.15);
+  }
+  .card-title{
+    padding: 0rem 0rem;
   }
 
-  .plan {
-    height: 39em;
-
-    box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.15);
+  .cardimg{
+   height: 125px;
   }
+  .cards:nth-child(2) {
+    display: none;
+  }
+  
   .resources-section .column-2 {
     margin: 0;
   }
@@ -1251,6 +1330,10 @@ header .column-2 {
   }
   .customer-feedback {
     left: 0;
+  }
+  .right,
+  .left {
+    font-size: 1rem;
   }
 }
 
@@ -1314,9 +1397,7 @@ header .column-2 {
   .section {
     padding: 2rem 0;
   }
-  .plan {
-    height: 39em;
-  }
+
   .start-btn {
     display: inline-block;
   }
@@ -1328,6 +1409,10 @@ header .column-2 {
 
   .slide-cards {
     flex-wrap: wrap;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
 
   .clients {
@@ -1360,12 +1445,22 @@ header .column-2 {
     width: 292px;
     height: 250px;
     margin: 5%;
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.15);
   }
 
   .plan {
-    height: 39em;
+    height: 30em;
 
     box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.15);
+  }
+  .plans-section .title{
+    font-size: 1.5rem;
+  }
+  .plans-title{
+    padding-bottom: 1rem;
+  }
+  .plans-section .container{
+    padding-top: 0;
   }
   .resources-section .column-2 {
     margin: 0;
@@ -1439,6 +1534,10 @@ header .column-2 {
 
   .slide-cards {
     flex-wrap: wrap;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
   }
 
   .clients {
@@ -1455,6 +1554,8 @@ header .column-2 {
   .cards {
     width: 300px;
     height: 340px;
+    margin: 1% 2%;
+    box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.15);
   }
   .slide-cards {
     width: 90%;
@@ -1475,7 +1576,7 @@ header .column-2 {
     padding: 3rem 0;
   }
   .plan {
-    height: 39em;
+    height: 33em;
   }
   .start-btn {
     display: inline-block;
@@ -1512,8 +1613,11 @@ header .column-2 {
   .section {
     padding: 2rem 0;
   }
-  .plan {
-    height: 39em;
+
+  
+  .right,
+  .left {
+    font-size: 1rem;
   }
 }
 
@@ -1545,7 +1649,7 @@ header .column-2 {
   .cards {
     width: 292px;
     height: 250px;
-    margin: 5%;
+    margin: 0 5%;
   }
 
   .plan {
@@ -1560,6 +1664,15 @@ header .column-2 {
   .analysis-section .grid-2 {
     height: 100%;
   }
+  .plan:hover {
+    height: 39em;
+  
+    margin-bottom: 0;
+    box-shadow: 0px 0px 36px 6px rgba(0, 0, 0, 0.247);
+  }
+  .plan:hover .start-btn {
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
@@ -1572,9 +1685,11 @@ header .column-2 {
   .title {
     font-size: 3rem;
   }
-
+  .logo a {
+    font-size: 2.5rem;
+  }
   .header-content .text {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .section .text {
@@ -1589,7 +1704,7 @@ header .column-2 {
   }
 
   .links a {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0.9rem 1.4rem;
   }
 
@@ -1597,13 +1712,26 @@ header .column-2 {
     width: 180px;
   }
   .login-btn {
-    margin-left: 1rem;
+    width: 160px;
+    margin-left: 4rem;
   }
-
+  .resources-section,
+  .analysis-section {
+    height: 100%;
+  }
   .cards {
-    width: 300px;
-    height: 250px;
-    margin: 5%;
+    width: 350px;
+    height: 320px;
+    margin: 0 5%;
+  }
+  .plan:hover {
+    height: 39em;
+  
+    margin-bottom: 0;
+    box-shadow: 0px 0px 36px 6px rgba(0, 0, 0, 0.247);
+  }
+  .plan:hover .start-btn {
+    display: inline-block;
   }
 }
 
@@ -1621,7 +1749,7 @@ header .column-2 {
   }
 
   .logo a {
-    font-size: 3.6rem;
+    font-size: 2.5rem;
   }
   .header-title {
     font-size: 5rem;
@@ -1702,5 +1830,14 @@ header .column-2 {
 
   .footer h6 {
     font-size: 2rem;
+  }
+  .plan:hover {
+    height: 39em;
+  
+    margin-bottom: 0;
+    box-shadow: 0px 0px 36px 6px rgba(0, 0, 0, 0.247);
+  }
+  .plan:hover .start-btn {
+    display: inline-block;
   }
 }
